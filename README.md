@@ -53,6 +53,15 @@ __How works the algorithm & tool__
 
 9. Using an LLM we enter the following prompt. I want you to create a meaningful text using the N generated words. The conditions will be simple: you have to use the words in order without modifying them. Between two words you can enter as many words as you want with the only condition that the selected words can not be in the dictionary of the word that the receiver expects to decode. If the LLM is able to do this, the text will have human validity and the receiver will not need the LLM to retrieve the hidden information. For example, give the word __house__ and __truck__. The resulting stegotext can use any number of words between __house__ and __truck__ with the only condition that _it cannot use any word from the dictionary from which the word truck was extracted_.
 
+10. how to decode. The receiver needs to use the same large dictionary words to generate the specific dictionaries. The concept "large" does not mean a huge file, a few thousand words might be enough.
+
+11. The receiver receives a potential stegotext. With the key shared with the sender, it generates a sufficient number of dictionaries to try to retrieve the information.
+
+12. The receiver generates the first dictionary containing 256 words. It starts reading the stegotext. If it finds any word in the dictionary it extracts its index (that will be the hidden information), if the word is not present in the dictionary it discards it.
+
+13. If it has found a word in the first dictionary, it generates a second dictionary and continues reading the stegotext to detect any word present in the dictionary. If it finds it, it extracts its index (the hidden information), otherwise it discards the word and continues reading. This process is repeated until the stegotext is finished and the information is retrieved.
+
+14. Thanks to the dictionaries and the process of discarding words, the receiver does not need to know the LLM to retrieve the hidden information.
 
 
 ## Usage & Parameters
