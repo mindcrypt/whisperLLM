@@ -33,6 +33,28 @@ _TOR address / TOR services hidden (96 bits...)(6bits char)_
 
 _Url 56 char -> 336 bits_
 
+__How works the algorithm & tool__
+
+1. Select a very large dictionary of words in the desired language in which we want to create the stegotext.
+
+2. Sender and receiver share a key
+
+3. The key is used to generate 256-word dictionaries at random. There will be as many different dictionaries as there are words generated that hide information.
+
+4. Each dictionary has 256 words. Therefore, 2^8=256. Each word can encode by its index in the table a value of 8 bits.
+
+5. We take the information to be hidden and we cut it into blocks of 8 bits.
+
+6. The first 8-bit block is used to select a word from the first dictionary. The 8 bits are the index that will allow to read the concrete word of the dictionary. This process is repeated until we have generated enough words to mask the information to be hidden. In each new iteration there will be a new block of 8 bits and a dictionary number.
+
+7. The result will be N words that form the stegotext. For example, if we want to hide 32 bits we would need to create 4 stego-words (8*4=32).
+
+8. The resulting stegotext hides information but has no linguistic meaning (neither syntactic, semantic, coherence, etc). We will use an LLM to correct this.
+
+9. Using an LLM we enter the following prompt. I want you to create a meaningful text using the N generated words. The conditions will be simple: you have to use the words in order without modifying them. Between two words you can enter as many words as you want with the only condition that the selected words can not be in the dictionary of the word that the receiver expects to decode. If the LLM is able to do this, the text will have human validity and the receiver will not need the LLM to retrieve the hidden information. For example, give the word __house__ and __truck__. The resulting stegotext can use any number of words between __house__ and __truck__ with the only condition that _it cannot use any word from the dictionary from which the word truck was extracted_.
+
+
+
 ## Usage & Parameters
 
 
