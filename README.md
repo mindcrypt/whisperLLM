@@ -8,6 +8,9 @@ This tool makes use of LLM to generate stegotexts in various languages (e.g., En
 
 ## Threat model
 
+The tool makes use of an LLM to hide the desired information. Depending on the technique used, the receiver would also need the LLM to retrieve the information. To facilitate the deployment of the tool in offensive environments with the smallest possible detection footprint the receiver will not need, with the implemented technique, the LLM to decode the information.
+![Screenshot](images/image1.png)
+
 ## How works. How much information can be hidden?
 
 
