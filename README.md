@@ -35,6 +35,8 @@ _Url 56 char -> 336 bits_
 
 __How works the algorithm & tool__
 
+![Screenshot](images/image2.png)
+
 1. Select a very large dictionary of words in the desired language in which we want to create the stegotext.
 
 2. Sender and receiver share a key
