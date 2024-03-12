@@ -14,6 +14,18 @@ The tool makes use of an LLM to hide the desired information. Depending on the t
 ## How works. How much information can be hidden?
 
 
+The technique has been designed to generate texts with a very good linguistic quality. The larger the text, the greater the number of errors that would require a correction process that could take some time. In our tests, and for practical scenarios, the tool proves useful in the order of a few hundred bits and a few thousand bits. This amount is adequate for exchanging configuration information (e.g. in a command & control model), location information (IPs, emails, URIs, TOR addresses, ...), cryptographic keys, etc.
+
+IPv4/IPv6 (32/128 bits)
+Cryptographic keys (128-4096 bits)
+Seed (random number) (48-128 bits)
+Phone number (44 bits...)
+Urls compacted (5 char->40 bits)
+Text in wide sense: 2000 hidden bits/6bits char = 333 hidden chars
+GPS coordinates (latitude/longitude) (80 bits...)
+TOR address / TOR services hidden (96 bits...)(6bits char)
+Url 56 char -> 336 bits
+
 ## Usage & Parameters
 
 
