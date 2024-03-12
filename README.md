@@ -16,3 +16,4 @@ This tool makes use of LLM to generate stegotexts in various languages (e.g., En
 
 ## Future work. Doing
 
+We have studied numerous LLMs and currently the one that gives the best results is GPT-4, which is the one we use in the tool. Currently, we are implementing Mixtral and Llama2 in the tool to have LLM models that can be run locally.
