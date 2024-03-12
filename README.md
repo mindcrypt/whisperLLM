@@ -11,7 +11,7 @@ This tool makes use of LLM to generate stegotexts in various languages (e.g., En
 The tool makes use of an LLM to hide the desired information. Depending on the technique used, the receiver would also need the LLM to retrieve the information. To facilitate the deployment of the tool in offensive environments with the smallest possible detection footprint the receiver will not need, with the implemented technique, the LLM to decode the information.
 ![Screenshot](images/image1.png)
 
-## How works. How much information can be hidden?
+## How much information can be hidden?
 
 The technique has been designed to generate texts with a very good linguistic quality. The larger the text, the greater the number of errors that would require a correction process that could take some time. In our tests, and for practical scenarios, the tool proves useful in the order of __a few hundred bits__ and a __few thousand bits__. This amount is adequate for exchanging configuration information (e.g. in a command & control model), location information (IPs, emails, URIs, TOR addresses, ...), cryptographic keys, etc.
 
@@ -33,7 +33,7 @@ _TOR address / TOR services hidden (96 bits...)(6bits char)_
 
 _Url 56 char -> 336 bits_
 
-__How works the algorithm & tool__
+## How works the algorithm & tool
 
 ![Screenshot](images/image2.png)
 
