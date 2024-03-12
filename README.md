@@ -13,26 +13,25 @@ The tool makes use of an LLM to hide the desired information. Depending on the t
 
 ## How works. How much information can be hidden?
 
+The technique has been designed to generate texts with a very good linguistic quality. The larger the text, the greater the number of errors that would require a correction process that could take some time. In our tests, and for practical scenarios, the tool proves useful in the order of __a few hundred bits__ and a __few thousand bits__. This amount is adequate for exchanging configuration information (e.g. in a command & control model), location information (IPs, emails, URIs, TOR addresses, ...), cryptographic keys, etc.
 
-The technique has been designed to generate texts with a very good linguistic quality. The larger the text, the greater the number of errors that would require a correction process that could take some time. In our tests, and for practical scenarios, the tool proves useful in the order of a few hundred bits and a few thousand bits. This amount is adequate for exchanging configuration information (e.g. in a command & control model), location information (IPs, emails, URIs, TOR addresses, ...), cryptographic keys, etc.
+_IPv4/IPv6 (32/128 bits)_
 
-IPv4/IPv6 (32/128 bits)
+_Cryptographic keys (128-4096 bits)_
 
-Cryptographic keys (128-4096 bits)
+_Seed (random number) (48-128 bits)_
 
-Seed (random number) (48-128 bits)
+_Phone number (44 bits...)_
 
-Phone number (44 bits...)
+_Urls compacted (5 char->40 bits)_
 
-Urls compacted (5 char->40 bits)
+_Text in wide sense: 2000 hidden bits/6bits char = 333 hidden chars_
 
-Text in wide sense: 2000 hidden bits/6bits char = 333 hidden chars
+_GPS coordinates (latitude/longitude) (80 bits...)_
 
-GPS coordinates (latitude/longitude) (80 bits...)
+_TOR address / TOR services hidden (96 bits...)(6bits char)_
 
-TOR address / TOR services hidden (96 bits...)(6bits char)
-
-Url 56 char -> 336 bits
+_Url 56 char -> 336 bits_
 
 ## Usage & Parameters
 
