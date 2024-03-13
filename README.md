@@ -68,7 +68,7 @@ _Url 56 char -> 336 bits_
 
 ## Usage & Parameters
 
-
+__#pip install openai__
 
 ## Examples
 
