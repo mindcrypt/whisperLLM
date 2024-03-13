@@ -69,6 +69,10 @@ _Url 56 char -> 336 bits_
 ## Usage & Parameters
 
 
+
+## Examples
+
+
 ## Future work. Doing
 
 We have studied numerous LLMs and currently the one that gives the best results is GPT-4, which is the one we use in the tool. Currently, we are implementing Mixtral and Llama2 in the tool to have LLM models that can be run locally.
