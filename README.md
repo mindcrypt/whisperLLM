@@ -43,7 +43,7 @@ _Url 56 char -> 336 bits_
 
 3. The key is used to generate 256-word dictionaries at random. There will be as many different dictionaries as there are words generated that hide information.
 
-4. Each dictionary has 256 words. Therefore, 2^8=256. Each word can encode by its index in the table a value of 8 bits.
+4. Each dictionary has 256 words. Therefore, 2^8=256. Each word can encode by its index in the table (dictionary) a value of 8 bits.
 
 5. We take the information to be hidden and we cut it into blocks of 8 bits.
 
