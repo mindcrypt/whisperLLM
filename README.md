@@ -49,7 +49,7 @@ _Url 56 char -> 336 bits_
 
 6. The first 8-bit block is used to select a word from the first dictionary. The 8 bits are the index that will allow to read the concrete word of the dictionary. This process is repeated until we have generated enough words to mask the information to be hidden. In each new iteration there will be a new block of 8 bits and a new random dictionary.
 
-7. The result will be N words that form the stegotext. For example, if we want to hide 32 bits we would need to create 4 stego-words (8*4=32).
+7. The result will be N words that make the stegotext. For example, if we want to hide 32 bits we would need to create 4 stego-words (8*4=32).
 
 8. The resulting stegotext hides information but has no linguistic meaning (neither syntactic, semantic, coherence, etc). We will use an LLM to correct this.
 
