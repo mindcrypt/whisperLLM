@@ -68,10 +68,13 @@ _Url 56 char -> 336 bits_
 
 ## Usage & Parameters
 
-__#pip install openai__
+Tool soon...
 
 ## Examples
 
+## Limitations
+
+LLM models sometimes do not respond properly to the instructions given, so it is necessary to vary the prompts and make the appropriate software corrections in order to have quality stegotexts. We are currently working on automating the solution of the most probable problems.
 
 ## Future work. Doing
 
