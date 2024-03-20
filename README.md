@@ -90,6 +90,9 @@ LLM models sometimes do not respond properly to the instructions given, so it is
 
 Two common errors are the following:
 
+1. The LLM model sometimes ignores and does not use all the generated words (stegowords) that hide the information. In this case it is necessary to perform more iterations with the LLM and modify the prompt so that it generates the stegotext with the desired conditions.
+
+2. The larger the stegotext, the more likely it is that errors will hinder decoding. A common error is the appearance of words that are in the dictionary of words that the receiver expects to decode but it is not the word that hides the information. In the examples you can see that in the words in red, the receiver expects to decode the next word that is in green but the LLM model has selected a word that is in the dictionary that the receiver expects so, in this situation, a synchronization problem occurs (the LLM ignores the prompt telling it that this situation cannot occur). To solve this problem, the tool applies several techniques to replace the red words with one or more words that are not in the expected decoding dictionary at any given time. 
 
 ## Future work. Doing
 
