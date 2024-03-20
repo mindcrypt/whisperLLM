@@ -72,9 +72,11 @@ Tool soon...
 
 ## Examples
 
-![Screenshot](images/examples1.png)
-![Screenshot](images/examples2.png)
-![Screenshot](images/examples3.png)
+![Screenshot](images/example1.png)
+
+![Screenshot](images/example2.png)
+
+![Screenshot](images/example3.png)
 
 ## Limitations
 
