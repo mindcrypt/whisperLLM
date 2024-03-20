@@ -72,6 +72,10 @@ Tool soon...
 
 ## Examples
 
+![Screenshot](images/examples1.png)
+![Screenshot](images/examples2.png)
+![Screenshot](images/examples3.png)
+
 ## Limitations
 
 LLM models sometimes do not respond properly to the instructions given, so it is necessary to vary the prompts and make the appropriate software corrections in order to have quality stegotexts. We are currently working on automating the solution of the most probable problems.
